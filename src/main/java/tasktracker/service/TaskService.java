@@ -12,7 +12,7 @@ import tasktracker.model.TaskStatus;
 
 /**
  * Core logic (add/edit/delete/list tasks)
- * @author paolo.cantoreggi
+ * @author pityafinwe
  */
 public class TaskService {
     
