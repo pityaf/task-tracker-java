@@ -42,7 +42,9 @@ public class TaskTrackerApp {
                     this.fileHandler.addToCsv(added);
                     System.out.printf("Task %s added.\n", title);
                 }
-                case "list" -> this.UI.printDB(this.taskService.getTasks());
+                case "list" -> {
+                    this.UI.printDB(this.taskService.getTasks());
+                }
                 case "view" -> {
                     if(input.length < 2) {
                         System.out.println("Usage: view <id>");
@@ -66,7 +68,15 @@ public class TaskTrackerApp {
                 }
                 case "update" -> {
                 }
-                case "help" -> this.UI.printHelp();
+                case "edit"-> {
+                }
+                case "filter" -> {
+                }
+                case "sort" -> {
+                }
+                case "help" -> {
+                    this.UI.printHelp();
+                }
                 case "exit" -> {
                     this.UI.printGoodbye();
                     return;
