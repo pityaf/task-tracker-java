@@ -1,5 +1,6 @@
 package tasktracker.util;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -8,7 +9,6 @@ import java.util.Scanner;
 
 import tasktracker.model.Task;
 import tasktracker.model.TaskStatus;
-
 
 /**
  * save/load tasks to file
@@ -24,7 +24,8 @@ public class FileHandler {
         this.fileName = "./src/main/java/tasktracker/data/task-data.csv";
         try {
             this.scanner = new Scanner(Paths.get(this.fileName));
-        } catch(Exception e) {
+            this.writer = new PrintWriter(this.fileName);
+        } catch(IOException e) {
             System.out.println("Unable to open file. " + e.getMessage());
         }
     } 
