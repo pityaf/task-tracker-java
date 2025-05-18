@@ -2,7 +2,6 @@ package tasktracker.util;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +18,7 @@ public class FileHandler {
     
     private final String fileName;
     private Scanner scanner;
-    private PrintWriter writer;
+    //private PrintWriter writer;
     
     public FileHandler() {
         this.fileName = "./src/main/java/tasktracker/data/task-data.csv";
