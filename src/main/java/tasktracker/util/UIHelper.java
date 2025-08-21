@@ -36,14 +36,14 @@ public class UIHelper {
         System.out.println("");
         System.out.println("-".repeat(90));
         System.out.println("  add               |   Add a new task");
-        System.out.println("  update            |   Update task status");
+        System.out.println("  update <id>       |   Update task status");
         System.out.println("  list              |   List all tasks created");
         System.out.println("  view <id>         |   View a single task given the ID");
         System.out.println("  edit <id>         |   Edit a single task given the ID");
         System.out.println("  delete <id>       |   Delete a single task given the ID");
         System.out.println("  status <id>       |   Status of a single task given the ID");
         System.out.println("  filter <status>   |   Filter active tasks based on STATUS");
-        System.out.println("  sort <field>      |   Sort actvie tasks based on the given field");
+        System.out.println("  sort              |   Sort actvie tasks based on STATUS");
         System.out.println("  help              |   Print help");
         System.out.println("  exit              |   Exit application");
         System.out.println("-".repeat(90));
