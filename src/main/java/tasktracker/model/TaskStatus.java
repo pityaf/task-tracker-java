@@ -10,4 +10,12 @@ package tasktracker.model;
  */
 public enum TaskStatus {
     TODO, IN_PROGRESS, DONE;
+
+    public TaskStatus next() {
+        TaskStatus[] values = values();
+        int nextIndex = (this.ordinal() + 1) % values.length;
+        return values[nextIndex];
+    }
 }
+
+
