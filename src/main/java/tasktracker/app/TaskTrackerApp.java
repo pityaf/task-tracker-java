@@ -123,7 +123,7 @@ public class TaskTrackerApp {
                         break;
                     }
                     
-                    TaskStatus statusType = TaskStatus.TODO;;
+                    TaskStatus statusType = TaskStatus.TODO;
 
                     try {
                         statusType = TaskStatus.valueOf(input[1]); 
