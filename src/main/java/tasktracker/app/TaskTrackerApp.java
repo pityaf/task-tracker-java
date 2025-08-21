@@ -73,6 +73,7 @@ public class TaskTrackerApp {
                     Task task = this.taskService.getTasks().get(deleteID);
 
                     if(task != null) {
+                        this.taskService.deleteTask(task.getID());
                         this.fileHandler.removeFromCsv(task);
                         this.taskService.initTasks(this.fileHandler.readFromCsv());
                     } else {
@@ -115,6 +116,22 @@ public class TaskTrackerApp {
                 }
                 case "edit"-> {
                     // edit task giveen the id
+                    if(input.length < 2) {
+                        System.out.println("Usage: edit <id>");
+                        break;
+                    }
+                    try {
+                        int updateID = Integer.parseInt(input[1]);
+                        
+                        System.out.println("Update task title:");
+                        String title = this.UI.askTaskToAdd();
+                        
+                        this.taskService.getTasks().get(updateID).setTitle(title);
+                        this.fileHandler.addToCsv(this.taskService.getTasks());
+
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid ID format: " + input[1]);
+                    }
                 }
                 case "filter" -> {
                     // base on status
